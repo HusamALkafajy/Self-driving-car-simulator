@@ -11,7 +11,7 @@ path = "Data"
 data = import_data_info(path)
 
 # Visualize and balance data
-data = balance_data(data,display=True)
+data = balance_data(data,display=False)
 
 # Load data
 img_paths, steerings =load_data(path,data)
