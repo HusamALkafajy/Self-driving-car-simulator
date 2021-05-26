@@ -27,7 +27,7 @@ def import_data_info(path):
     
 def balance_data(data,display=True):
     nbins = 31 # It has to be odd no because we want 0 as a center
-    sample_per_bin = 1000
+    sample_per_bin = 500
     hist,bins = np.histogram(data['Steering'],nbins)
     # print(bins)
     if display:

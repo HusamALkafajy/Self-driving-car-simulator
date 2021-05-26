@@ -28,12 +28,12 @@ model = create_model()
 model.summary()
 
 # Train model
-history = model.fit(batch_gen(X_train,y_train,100,1),steps_per_epoch=300,epochs=10,validation_data=batch_gen(X_test,y_test,100,0),validation_steps=200)
+history = model.fit(batch_gen(X_train,y_train,100,1),steps_per_epoch=300,epochs=15,validation_data=batch_gen(X_test,y_test,100,0),validation_steps=200)
 # batch = 100 , steps_per_epoch = 300 and epochs =  10
 # For validation batch = 100 and steps = 200
 
 # Save model
-model.save('model.h5')
+model.save('model_v2.h5')
 print("Model Saved")
 
 plt.plot(history.history['loss'])
@@ -43,4 +43,3 @@ plt.ylim([0,1])
 plt.title("Loss")
 plt.xlabel('Epoch')
 plt.show()
-plt.savefig()
