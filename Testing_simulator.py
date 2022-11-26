@@ -56,3 +56,4 @@ if __name__ == '__main__':
     model = load_model('model_v2.h5')
     app = socketio.Middleware(sio,app)  
     eventlet.wsgi.server(eventlet.listen(('', 4567)), app)
+
